@@ -19,6 +19,7 @@ from django.urls import path
 from AppEntregable1.views import *
 
 urlpatterns = [
+    path('', inicio),
     path('admin/', admin.site.urls),
     path('familia/', Familia),
 ]

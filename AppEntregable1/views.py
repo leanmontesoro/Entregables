@@ -4,6 +4,13 @@ from django.shortcuts import render
 from .models import GrupoFamiliar
 # Create your views here.
 
+
+def inicio(request):
+    mensaje={"mensaje":"Soy la pagina de inicio"}
+    plantilla= loader.get_template("template_inicio.html")
+    documento=plantilla.render(mensaje)
+    return HttpResponse(documento)
+
 def Familia(request):
 
 #Creo objetos GrupoFamiliar y los guardo.
