@@ -6,10 +6,12 @@ from .models import GrupoFamiliar
 
 
 def inicio(request):
-    mensaje={"mensaje":"Soy la pagina de inicio"}
-    plantilla= loader.get_template("template_inicio.html")
-    documento=plantilla.render(mensaje)
-    return HttpResponse(documento)
+    #mensaje={"mensaje":"Soy la pagina de inicio"}
+    #plantilla= loader.get_template("template_inicio.html")
+    #documento=plantilla.render(mensaje)
+    #return HttpResponse(documento)
+    return render (request, "../../AppEntregable1/templates/template_inicio.html",{"mensaje":"Soy la pagina de inicio"})
+
 
 def Familia(request):
 
