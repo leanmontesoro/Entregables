@@ -10,10 +10,10 @@ def inicio(request):
     #plantilla= loader.get_template("template_inicio.html")
     #documento=plantilla.render(mensaje)
     #return HttpResponse(documento)
-    return render (request, "../../AppEntregable1/templates/template_inicio.html",{"mensaje":"Soy la pagina de inicio"})
+    return render (request, "../../AppEntregable1/templates/template_padre.html")
 
 
-def Familia(request):
+def familia(request):
 
 #Creo objetos GrupoFamiliar y los guardo.
     hermano=GrupoFamiliar(nombre="Leandro",edad=19,fec_nac="2022-01-03",apellido="monte")
@@ -34,6 +34,7 @@ def Familia(request):
         "edad_hermano":hermano.edad,
         "fec_nac_hermano":hermano.fec_nac,
         
+        
         "nom_padre":padre.nombre,
         "edad_padre":padre.edad,
         "fec_nac_padre":padre.fec_nac,
@@ -43,8 +44,26 @@ def Familia(request):
         "fec_nac_madre":madre.fec_nac
     }
 
-    plantilla= loader.get_template("template.html")
-    documento=plantilla.render(diccionario_fliar)
+    #plantilla= loader.get_template("template.html")
+    #documento=plantilla.render(diccionario_fliar)
+    #return HttpResponse(documento)
+    return render (request, "../../AppEntregable1/templates/familia.html",diccionario_fliar)
 
-   
-    return HttpResponse(documento)
+
+
+def madres(request):
+
+    return render (request, "../../AppEntregable1/templates/madres.html")
+
+def padres(request):
+    
+    return render (request, "../../AppEntregable1/templates/padres.html")
+
+
+def hermanos(request):
+    
+    return render (request, "../../AppEntregable1/templates/hermanos.html")
+
+def familiaFormulario(request):
+
+    return render(request, "../../AppEntregable1/templates/familiaFormulario.html")
