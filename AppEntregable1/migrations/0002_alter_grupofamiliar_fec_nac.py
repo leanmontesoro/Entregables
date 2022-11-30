@@ -11,7 +11,7 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.AlterField(
-            model_name='grupofamiliar',
+            model_name='familiar',
             name='fec_nac',
             field=models.DateField(default='2022-00-00'),
         ),

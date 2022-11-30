@@ -1,8 +1,8 @@
 from django.db import models
 
 # Create your models here.
-
-class GrupoFamiliar(models.Model):
+## TODO: reformular models
+class Familiar(models.Model):
     
     nombre=models.CharField(max_length=20,default="name")
     apellido=models.CharField(max_length=20,default="apellido")

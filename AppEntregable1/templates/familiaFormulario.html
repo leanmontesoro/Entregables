@@ -10,11 +10,16 @@
 
 {% block formulario %}
 
-<h1>Aca iria el formulario</h1>
+<h1>Formulario familiar</h1>
 
-<form action="{% url 'familiaFormulario' %}" method="POST">
+<form action="{% url 'familiaFormulario' %}" method="POST"> {% csrf_token %}
 
+<p> Nombre:          <input type="text" name="nombre">    </p>
+<p> Apellido:          <input type="text" name="apellido">    </p>
+<p> Edad:          <input type="text" name="edad">    </p>
+<p> Fecha de nacimiento:          <input type="text" name="fec_nac">    </p>
 
+<input type="submit" value="Agregar familiar">
 
 
 </form>
