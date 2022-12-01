@@ -1,0 +1,28 @@
+{% extends "template_padre.html" %}
+{% load static %}
+
+
+{% block detalle %}
+
+<h1 class="mb-5">Tecnicos</h1>
+                            
+{% endblock %}
+
+{% block formulario %}
+
+<h1>Formulario para carga de DT's</h1>
+
+<form action="{% url 'tecnicoFormulario' %}" method="POST"> {% csrf_token %}
+
+<p> Nombre:<input type="text" name="nombre">    </p>
+<p> Apellido:<input type="text" name="apellido">    </p>
+<p> Edad:<input type="text" name="edad">    </p>
+<p> Pais:<input type="text" name="pais">    </p>
+<p> Equipo:<input type="text" name="equipo">    </p>
+
+
+<input type="submit" value="Agregar DT">
+
+
+</form>
+{% endblock %}

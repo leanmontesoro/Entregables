@@ -22,10 +22,9 @@
         <nav class="navbar navbar-light bg-light static-top">
             <div class="container">
                 <a class="navbar-brand" href="#!">Start Bootstrap</a>
-                <a class="btn btn-primary" href="{% url 'flia' %}">Familia</a>
-                <a class="btn btn-primary" href="{% url 'padres' %}">Padre</a>
-                <a class="btn btn-primary" href="{% url 'madres' %}">Madre</a>
-                <a class="btn btn-primary" href="{% url 'hermanos' %}">Hermano</a>
+                <a class="btn btn-primary" href="{% url 'equipo' %}">Equipos</a>
+                <a class="btn btn-primary" href="{% url 'jugador' %}">Jugadores</a>
+                <a class="btn btn-primary" href="{% url 'tecnico' %}">Tecnicos</a>
             </div>
         </nav>
         <!-- Masthead-->
@@ -36,7 +35,7 @@
                         <div class="text-center text-white">
                             <!-- Page heading-->
                             <!--<h1 class="mb-5">{{ mensaje }}</h1>-->
-                            {% block familia_detalle %}
+                            {% block detalle %}
 
 
                             {% endblock %}

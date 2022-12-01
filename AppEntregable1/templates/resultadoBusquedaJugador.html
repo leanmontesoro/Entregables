@@ -1,0 +1,28 @@
+{% extends "template_padre.html" %}
+{% load static %}
+
+
+{% block detalle %}
+
+<h1 class="mb-5">Resultado busqueda jugadores</h1>
+                            
+{% endblock %}
+
+{% block formulario %}
+
+{% if jugadores %}
+<ul>
+    {% for jugador in jugadores %}
+        <li>Nombre: {{jugador.nombre}}  {{ jugador.apellido }}</li>
+        <li>Equipo: {{jugador.equipo}}</li>
+        <li>Posicion: {{jugador.posicion}}</li>
+        <br>
+    {% endfor %}
+</ul>
+
+{% else %}
+
+<p> NO HAY JUGADORES QUE COINCIDAN CON LA BUSQUEDA</p>
+
+{% endif %}
+{% endblock %}

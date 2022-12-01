@@ -1,0 +1,23 @@
+{% extends "template_padre.html" %}
+{% load static %}
+
+
+{% block detalle %}
+
+<h1 class="mb-5">Jugadores</h1>
+                            
+{% endblock %}
+
+{% block formulario %}
+
+<h1>Formulario para carga de jugadores</h1>
+
+<form method="POST"> {% csrf_token %}
+
+{{ form.as_p }}
+
+<input type="submit" value="Agregar jugador">
+
+
+</form>
+{% endblock %}

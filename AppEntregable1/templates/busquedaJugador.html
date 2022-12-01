@@ -1,0 +1,24 @@
+{% extends "template_padre.html" %}
+{% load static %}
+
+
+{% block detalle %}
+
+<h1 class="mb-5">Formulario de busqueda de jugadores</h1>
+                            
+{% endblock %}
+
+{% block formulario %}
+
+<h1>Formulario de busqueda de jugadores por equipo</h1>
+<h5>Ingrese un equipo para visualizar sus jugadores</h5>
+
+<form action="{% url 'buscar' %}" method="GET"> 
+
+    <input type="text" name="equipo" id="equipo">
+
+    <input type="submit" value="buscar jugador">
+
+
+</form>
+{% endblock %}
